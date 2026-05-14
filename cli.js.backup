@@ -1,0 +1,120 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+const DATA_FILE = path.join(__dirname, 'games.json');
+
+// Initialize data file if it doesn't exist
+function initDataFile() {
+  if (!fs.existsSync(DATA_FILE)) {
+    fs.writeFileSync(DATA_FILE, JSON.stringify([]));
+  }
+}
+
+// Load games from JSON file
+function loadGames() {
+  initDataFile();
+  const data = fs.readFileSync(DATA_FILE, 'utf8');
+  return JSON.parse(data);
+}
+
+// Save games to JSON file
+function saveGames(games) {
+  fs.writeFileSync(DATA_FILE, JSON.stringify(games, null, 2));
+}
+
+// Add a new game
+function addGame(title, platform) {
+  const games = loadGames();
+  games.push({ title, platform });
+  saveGames(games);
+  console.log(`Added: ${title} (${platform})`);
+}
+
+// List all games
+function listGames() {
+  const games = loadGames();
+  
+  if (games.length === 0) {
+    console.log('No games found.');
+    return;
+  }
+  
+  console.log('Saved Games:');
+  console.log('------------');
+  games.forEach((game, index) => {
+    console.log(`${index + 1}. ${game.title} - ${game.platform}`);
+  });
+}
+
+// Search games by title or platform (case-insensitive)
+function searchGames(term) {
+  const games = loadGames();
+  const lowerTerm = term.toLowerCase();
+  
+  const matches = games.filter(game => 
+    game.title.toLowerCase().includes(lowerTerm) || 
+    game.platform.toLowerCase().includes(lowerTerm)
+  );
+  
+  if (matches.length === 0) {
+    console.log(`No games found matching "${term}".`);
+    return;
+  }
+  
+  console.log(`Search results for "${term}":`);
+  console.log('------------------------');
+  matches.forEach((game, index) => {
+    console.log(`${index + 1}. ${game.title} - ${game.platform}`);
+  });
+}
+
+// Handle command line arguments
+function main() {
+  const args = process.argv.slice(2);
+  
+  if (args.length === 0) {
+    console.log('Usage:');
+    console.log('  node cli.js add <title> <platform>');
+    console.log('  node cli.js list');
+    console.log('  node cli.js search <term>');
+    process.exit(1);
+  }
+  
+  const command = args[0];
+  
+  switch (command) {
+    case 'add':
+      if (args.length < 3) {
+        console.log('Error: Please provide both title and platform');
+        console.log('Usage: node cli.js add <title> <platform>');
+        process.exit(1);
+      }
+      const title = args[1];
+      const platform = args[2];
+      addGame(title, platform);
+      break;
+      
+    case 'list':
+      listGames();
+      break;
+      
+    case 'search':
+      if (args.length < 2) {
+        console.log('Error: Please provide a search term');
+        console.log('Usage: node cli.js search <term>');
+        process.exit(1);
+      }
+      const term = args[1];
+      searchGames(term);
+      break;
+      
+    default:
+      console.log('Error: Unknown command');
+      console.log('Available commands: add, list, search');
+      process.exit(1);
+  }
+}
+
+main()
