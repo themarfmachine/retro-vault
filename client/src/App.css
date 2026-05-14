@@ -1,0 +1,170 @@
+:root {
+  --bg-color: #0f0f23;
+  --card-bg: #1a1a3e;
+  --primary: #00ff88;
+  --accent: #ff00ff;
+  --warning: #ffaa00;
+  --cyan: #00ffff;
+  --text: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text);
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.5;
+  font-size: 10px;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  text-shadow: 3px 3px var(--accent);
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+.add-game-form {
+  background: var(--card-bg);
+  border: 4px solid var(--cyan);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  box-shadow: 5px 5px 0px var(--accent);
+}
+
+.add-game-form input {
+  background: var(--bg-color);
+  border: 2px solid var(--primary);
+  color: var(--text);
+  padding: 0.5rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+}
+
+.add-game-form button {
+  background: var(--primary);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+  transition: transform 0.1s;
+}
+
+.add-game-form button:active {
+  transform: scale(0.95);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toggle-btn {
+  background: var(--card-bg);
+  border: 2px solid var(--warning);
+  color: var(--warning);
+  padding: 0.5rem;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+}
+
+.toggle-btn.active {
+  background: var(--warning);
+  color: var(--bg-color);
+  box-shadow: 0 0 10px var(--warning);
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.game-card {
+  background: var(--card-bg);
+  border: 2px solid var(--cyan);
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.game-card.cabinet-ready {
+  border-color: var(--warning);
+  box-shadow: 0 0 10px rgba(255, 170, 0, 0.3);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px rgba(255, 170, 0, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(255, 170, 0, 0.5); }
+  100% { box-shadow: 0 0 10px rgba(255, 170, 0, 0.3); }
+}
+
+.game-title {
+  color: var(--accent);
+  margin: 0 0 1rem 0;
+  font-size: 12px;
+}
+
+.game-platform {
+  color: var(--primary);
+  margin: 0 0 1rem 0;
+}
+
+.player-count {
+  display: inline-block;
+  background: rgba(0, 255, 136, 0.1);
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--primary);
+  font-size: 8px;
+}
+
+.cabinet-badge {
+  background: var(--warning);
+  color: var(--bg-color);
+  border-color: var(--warning);
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: #ff4444;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+}
+
+.delete-btn:hover {
+  color: #ff0000;
+}
