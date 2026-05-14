@@ -1,35 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-const fs = require('fs');
-const path = require('path');
+const { getGamesData, saveGames } = require('./db');
 
 const app = express();
 const PORT = 3001;
-const DATA_FILE = path.join(__dirname, 'games.json');
 
 app.use(cors());
 app.use(express.json());
-
-// Shared data logic
-function initDataFile() {
-  if (!fs.existsSync(DATA_FILE)) {
-    fs.writeFileSync(DATA_FILE, JSON.stringify([]));
-  }
-}
-
-function getGamesData() {
-  initDataFile();
-  const data = fs.readFileSync(DATA_FILE, 'utf8');
-  const games = JSON.parse(data);
-  games.forEach(game => {
-    if (!('players' in game)) game.players = 1;
-  });
-  return games;
-}
-
-function saveGames(games) {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(games, null, 2));
-}
 
 // API Routes
 app.get('/api/games', (req, res) => {
