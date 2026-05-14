@@ -16,7 +16,16 @@ function initDataFile() {
 function getGamesData() {
   initDataFile();
   const data = fs.readFileSync(DATA_FILE, 'utf8');
-  return JSON.parse(data);
+  const games = JSON.parse(data);
+  
+  // Ensure all games have players field (default to 1 for existing entries)
+  games.forEach(game => {
+    if (!('players' in game)) {
+      game.players = 1;
+    }
+  });
+  
+  return games;
 }
 
 // Save games to JSON file
@@ -25,23 +34,30 @@ function saveGames(games) {
 }
 
 // Add a new game
-function addGame(title, platform) {
+function addGame(title, platform, players) {
   const games = getGamesData();
-  games.push({ title, platform });
+  games.push({ title, platform, players: Number(players) });
   saveGames(games);
   console.log(`Added: ${title} (${platform})`);
 }
 
 // Display games with duplicate prevention
-function displayGames(games, header) {
-  if (games.length === 0) {
+function displayGames(games, header, filterPlayers = null) {
+  let displayList = games;
+  
+  if (filterPlayers !== null) {
+    displayList = games.filter(game => game.players === filterPlayers);
+    header += ` (${filterPlayers} player${filterPlayers === 1 ? '' : 's'})`;
+  }
+
+  if (displayList.length === 0) {
     console.log('No games found.');
     return;
   }
   
   // Filter out duplicates based on title+platform combination
   const seen = new Set();
-  const uniqueGames = games.filter(game => {
+  const uniqueGames = displayList.filter(game => {
     const key = `${game.title.toLowerCase()}|${game.platform.toLowerCase()}`;
     if (seen.has(key)) return false;
     seen.add(key);
@@ -51,14 +67,15 @@ function displayGames(games, header) {
   console.log(header);
   console.log('-'.repeat(header.length));
   uniqueGames.forEach((game, index) => {
-    console.log(`${index + 1}. ${game.title} - ${game.platform}`);
+    const playerLabel = game.players === 1 ? '1 player' : `${game.players} players`;
+    console.log(`${index + 1}. ${game.title} - ${game.platform} (${playerLabel})`);
   });
 }
 
 // List all games
-function listGames() {
+function listGames(filterPlayers = null) {
   const games = getGamesData();
-  displayGames(games, 'Saved Games');
+  displayGames(games, 'Saved Games', filterPlayers);
 }
 
 // Search games: exact platform match first, then partial title search
@@ -111,8 +128,8 @@ function main() {
   
   if (args.length === 0) {
     console.log('Usage:');
-    console.log('  node cli.js add <title> <platform>');
-    console.log('  node cli.js list');
+    console.log('  node cli.js add <title> <platform> <players>');
+    console.log('  node cli.js list [--players <n>]');
     console.log('  node cli.js search <term>');
     console.log('  node cli.js delete <title>');
     process.exit(1);
@@ -122,18 +139,33 @@ function main() {
   
   switch (command) {
     case 'add':
-      if (args.length < 3) {
-        console.log('Error: Please provide both title and platform');
-        console.log('Usage: node cli.js add <title> <platform>');
+      if (args.length < 4) {
+        console.log('Error: Please provide title, platform, and player count');
+        console.log('Usage: node cli.js add <title> <platform> <players>');
         process.exit(1);
       }
       const title = args[1];
       const platform = args[2];
-      addGame(title, platform);
+      const players = args[3];
+      const playersNum = Number(players);
+      if (isNaN(playersNum) || playersNum <= 0) {
+        console.log('Error: Player count must be a positive number');
+        process.exit(1);
+      }
+      addGame(title, platform, playersNum);
       break;
       
     case 'list':
-      listGames();
+      let filterPlayers = null;
+      const playerIdx = args.indexOf('--players');
+      if (playerIdx !== -1 && args[playerIdx + 1]) {
+        filterPlayers = Number(args[playerIdx + 1]);
+        if (isNaN(filterPlayers)) {
+          console.log('Error: Filter player count must be a number');
+          process.exit(1);
+        }
+      }
+      listGames(filterPlayers);
       break;
       
     case 'search':

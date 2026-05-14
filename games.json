@@ -1,34 +1,202 @@
 [
   {
     "title": "Mickey Mousecapades",
-    "platform": "NES"
+    "platform": "NES",
+    "players": 1
   },
   {
     "title": "The Legend of Zelda",
-    "platform": "NES"
+    "platform": "NES",
+    "players": 1
   },
   {
     "title": "Super Mario World",
-    "platform": "SNES"
+    "platform": "SNES",
+    "players": 1
   },
   {
     "title": "Duck Tales",
-    "platform": "NES"
+    "platform": "NES",
+    "players": 1
   },
   {
     "title": "Ice Hockey",
-    "platform": "NES"
+    "platform": "NES",
+    "players": 1
   },
   {
     "title": "Contra",
-    "platform": "NES"
+    "platform": "NES",
+    "players": 1
   },
   {
     "title": "Pokemon Red",
-    "platform": "GB"
+    "platform": "GB",
+    "players": 1
   },
   {
     "title": "Pokemon Blue",
-    "platform": "GB"
+    "platform": "GB",
+    "players": 1
+  },
+  {
+    "title": "Gauntlet",
+    "platform": "Arcade",
+    "players": 4
+  },
+  {
+    "title": "Super Mario Bros.",
+    "platform": "NES",
+    "players": 2
+  },
+  {
+    "title": "Pac-Man",
+    "platform": "Arcade",
+    "players": 2
+  },
+  {
+    "title": "Sonic the Hedgehog 2",
+    "platform": "Sega Genesis",
+    "players": 2
+  },
+  {
+    "title": "Streets of Rage 2",
+    "platform": "Sega Genesis",
+    "players": 2
+  },
+  {
+    "title": "Mortal Kombat II",
+    "platform": "Sega Genesis",
+    "players": 2
+  },
+  {
+    "title": "Metal Gear Solid",
+    "platform": "PlayStation",
+    "players": 1
+  },
+  {
+    "title": "Tekken 3",
+    "platform": "PlayStation",
+    "players": 2
+  },
+  {
+    "title": "Crash Bandicoot",
+    "platform": "PlayStation",
+    "players": 1
+  },
+  {
+    "title": "Castlevania: SotN",
+    "platform": "PlayStation",
+    "players": 1
+  },
+  {
+    "title": "Mario Kart 64",
+    "platform": "N64",
+    "players": 4
+  },
+  {
+    "title": "GoldenEye 007",
+    "platform": "N64",
+    "players": 4
+  },
+  {
+    "title": "Star Fox 64",
+    "platform": "N64",
+    "players": 4
+  },
+  {
+    "title": "The Legend of Zelda: OoT",
+    "platform": "N64",
+    "players": 1
+  },
+  {
+    "title": "Pokémon Gold",
+    "platform": "GBC",
+    "players": 1
+  },
+  {
+    "title": "Link's Awakening DX",
+    "platform": "GBC",
+    "players": 1
+  },
+  {
+    "title": "Chrono Trigger",
+    "platform": "SNES",
+    "players": 1
+  },
+  {
+    "title": "Street Fighter II",
+    "platform": "SNES",
+    "players": 2
+  },
+  {
+    "title": "Super Mario Kart",
+    "platform": "SNES",
+    "players": 2
+  },
+  {
+    "title": "Donkey Kong Country",
+    "platform": "SNES",
+    "players": 2
+  },
+  {
+    "title": "Teenage Mutant Ninja Turtles",
+    "platform": "Arcade",
+    "players": 4
+  },
+  {
+    "title": "The Simpsons Game",
+    "platform": "Arcade",
+    "players": 4
+  },
+  {
+    "title": "Dig Dug",
+    "platform": "Arcade",
+    "players": 1
+  },
+  {
+    "title": "X-Men",
+    "platform": "Arcade",
+    "players": 4
+  },
+  {
+    "title": "SoulCalibur",
+    "platform": "Dreamcast",
+    "players": 2
+  },
+  {
+    "title": "Crazy Taxi",
+    "platform": "Dreamcast",
+    "players": 1
+  },
+  {
+    "title": "Halo: Combat Evolved",
+    "platform": "Xbox",
+    "players": 2
+  },
+  {
+    "title": "Star Wars: KOTOR",
+    "platform": "Xbox",
+    "players": 1
+  },
+  {
+    "title": "Metroid Prime",
+    "platform": "GameCube",
+    "players": 1
+  },
+  {
+    "title": "Super Smash Bros. Melee",
+    "platform": "GameCube",
+    "players": 4
+  },
+  {
+    "title": "Sonic Adventure",
+    "platform": "Dreamcast",
+    "players": 1
+  },
+  {
+    "title": "Final Fantasy VII",
+    "platform": "PlayStation",
+    "players": 1
   }
 ]
