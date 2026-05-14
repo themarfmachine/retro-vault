@@ -84,6 +84,27 @@ function searchGames(term) {
   displayGames(titleMatches, `Search results for "${term}" (title match)`);
 }
 
+// Delete games by title (case-insensitive)
+function deleteGame(title) {
+  const games = getGamesData();
+  const lowerTitle = title.toLowerCase();
+  
+  // Filter out games that match the title (case-insensitive)
+  const filteredGames = games.filter(game => 
+    game.title.toLowerCase() !== lowerTitle
+  );
+  
+  // Check if any games were removed
+  if (filteredGames.length === games.length) {
+    console.log(`No game found with title "${title}".`);
+    return;
+  }
+  
+  // Save the updated list
+  saveGames(filteredGames);
+  console.log(`Removed all games with title "${title}".`);
+}
+
 // Handle command line arguments
 function main() {
   const args = process.argv.slice(2);
@@ -93,6 +114,7 @@ function main() {
     console.log('  node cli.js add <title> <platform>');
     console.log('  node cli.js list');
     console.log('  node cli.js search <term>');
+    console.log('  node cli.js delete <title>');
     process.exit(1);
   }
   
@@ -120,13 +142,23 @@ function main() {
         console.log('Usage: node cli.js search <term>');
         process.exit(1);
       }
-      const term = args[1];
+      const term = args.slice(1).join(' ');
       searchGames(term);
+      break;
+      
+    case 'delete':
+      if (args.length < 2) {
+        console.log('Error: Please provide a game title to delete');
+        console.log('Usage: node cli.js delete <title>');
+        process.exit(1);
+      }
+      const gameTitle = args.slice(1).join(' ');
+      deleteGame(gameTitle);
       break;
       
     default:
       console.log('Error: Unknown command');
-      console.log('Available commands: add, list, search');
+      console.log('Available commands: add, list, search, delete');
       process.exit(1);
   }
 }
