@@ -67,7 +67,7 @@ function App() {
   const filteredGames = cabinetOnly ? games.filter(g => g.players === 4) : games;
 
   return (
-    <div className="App">
+    <div className="App crt-screen">
       <h1>RETRO VAULT</h1>
 
       <form className="add-game-form" onSubmit={handleAddGame}>

@@ -198,5 +198,10 @@
     "title": "Final Fantasy VII",
     "platform": "PlayStation",
     "players": 1
+  },
+  {
+    "title": "Festers Quest",
+    "platform": "NES",
+    "players": 1
   }
 ]

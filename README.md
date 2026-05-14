@@ -19,6 +19,20 @@ A retro game collection manager with both a command-line interface and a profess
    ```
 3. Open **http://localhost:5173** in your browser.
 
+## Deployment with Docker
+
+Retro Vault can be deployed using Docker, which is ideal for arcade cabinet hardware.
+
+1. **Build and Start**:
+   ```bash
+   docker compose up --build -d
+   ```
+2. **Access**:
+   - Web UI: **http://localhost:8080**
+   - API: **http://localhost:3001/api/games**
+
+The `games.json` file is mounted as a volume, ensuring your collection persists between container restarts.
+
 ## Web App
 
 The web interface provides a retro-themed browser experience for managing your vault.

@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: .
+    container_name: retro-vault-backend
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./games.json:/app/games.json
+    restart: unless-stopped
+
+  frontend:
+    build: ./client
+    container_name: retro-vault-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

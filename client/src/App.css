@@ -1,3 +1,52 @@
+/* ── CRT Screen Effect ── */
+
+.crt-screen {
+  position: relative;
+  animation: flicker 0.15s infinite;
+}
+
+/* Scanlines */
+.crt-screen::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.06) 0px,
+    rgba(0, 0, 0, 0.06) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Vignette — curved screen illusion */
+.crt-screen::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes flicker {
+  0%   { opacity: 1; }
+  45%  { opacity: 0.997; }
+  46%  { opacity: 0.992; }
+  47%  { opacity: 0.997; }
+  48%  { opacity: 1; }
+  80%  { opacity: 0.998; }
+  81%  { opacity: 0.993; }
+  82%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
 :root {
   --bg-color: #0f0f23;
   --card-bg: #1a1a3e;
