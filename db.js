@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { GameSchema } = require('./schema');
+const { getGameCover } = require('./igdbService');
 
 let DATA_FILE = path.join(__dirname, 'games.json');
 
@@ -17,15 +18,18 @@ function initDataFile() {
 }
 
 // Read and parse games data
+// Note: Synchronous because it's called on server startup and by CLI
 function getGamesData() {
   initDataFile();
   const data = fs.readFileSync(DATA_FILE, 'utf8');
   const games = JSON.parse(data);
+  let needsSave = false;
   
   // Ensure all games have players field (default to 1 for existing entries)
   games.forEach((game, index) => {
     if (!('players' in game)) {
       game.players = 1;
+      needsSave = true;
     }
     
     // Validate against schema
@@ -36,6 +40,35 @@ function getGamesData() {
       throw new Error(`DATA CORRUPTION: games.json contains invalid entries. Fix or reset the file.`);
     }
   });
+  
+  // We perform initial lazy fetching in a background task rather than blocking getGamesData
+  // which is synchronous and called frequently
+  setTimeout(async () => {
+    let backgroundUpdated = false;
+    for (const game of games) {
+      if (!game.coverUrl) {
+        try {
+          const url = await getGameCover(game.title);
+          if (url) {
+            game.coverUrl = url;
+            backgroundUpdated = true;
+            console.log(`[IGDB] Found cover art for: ${game.title}`);
+          }
+          // Sleep for 300ms to avoid hitting IGDB rate limits (4 req/sec max)
+          await new Promise(resolve => setTimeout(resolve, 300));
+        } catch (e) {
+          // ignore errors in background sync
+        }
+      }
+    }
+    if (backgroundUpdated) {
+      saveGames(games);
+    }
+  }, 0);
+  
+  if (needsSave) {
+    saveGames(games);
+  }
   
   return games;
 }

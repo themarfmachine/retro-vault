@@ -1,9 +1,15 @@
-import { describe, it, expect, beforeEach, afterAll } from 'vitest';
+import { describe, it, expect, beforeEach, afterAll, vi } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import { getGamesData, setDataFile } from './db';
+import * as igdbService from './igdbService';
 
 const TEST_DATA_FILE = path.join(__dirname, 'games.test.json');
+
+// Mock the IGDB service so we don't make real API calls during tests
+vi.mock('./igdbService', () => ({
+  getGameCover: vi.fn().mockResolvedValue(null)
+}));
 
 describe('db logic', () => {
   beforeEach(() => {

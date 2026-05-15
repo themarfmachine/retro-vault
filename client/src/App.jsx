@@ -109,6 +109,15 @@ function App() {
         {filteredGames.map((game, i) => (
           <div key={`${game.title}-${i}`} className={`game-card ${game.players === 4 ? 'cabinet-ready' : ''}`}>
             <button className="delete-btn" onClick={() => handleDelete(game.title)}>X</button>
+            
+            {game.coverUrl ? (
+              <img src={game.coverUrl} alt={`${game.title} cover`} className="game-cover" />
+            ) : (
+              <div className="game-cover placeholder">
+                <span>NO SIGNAL</span>
+              </div>
+            )}
+            
             <h3 className="game-title">{game.title}</h3>
             <div className="game-platform">{game.platform}</div>
             <div className={`player-count ${game.players === 4 ? 'cabinet-badge' : ''}`}>

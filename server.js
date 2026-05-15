@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { getGamesData, saveGames } = require('./db');
+const { getGameCover } = require('./igdbService');
 
 const app = express();
 const PORT = 3001;
@@ -50,6 +51,37 @@ app.delete('/api/games/:title', (req, res) => {
     res.json({ deleted: deletedCount });
   } catch (error) {
     res.status(500).json({ error: 'Failed to delete game' });
+  }
+});
+
+app.get('/api/media/:title', async (req, res) => {
+  const targetTitle = req.params.title;
+  
+  try {
+    // Attempt to fetch from IGDB
+    const coverUrl = await getGameCover(targetTitle);
+    
+    // If a cover was found, optionally update the database
+    if (coverUrl) {
+       const games = getGamesData();
+       let updated = false;
+       
+       for (const game of games) {
+          if (game.title.toLowerCase() === targetTitle.toLowerCase() && !game.coverUrl) {
+             game.coverUrl = coverUrl;
+             updated = true;
+          }
+       }
+       
+       if (updated) {
+         saveGames(games);
+       }
+    }
+    
+    res.json({ coverUrl });
+  } catch (error) {
+    console.error('Error fetching media route:', error);
+    res.status(500).json({ error: 'Failed to fetch media' });
   }
 });
 

@@ -2,17 +2,20 @@
   {
     "title": "Mickey Mousecapades",
     "platform": "NES",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co52in.jpg"
   },
   {
     "title": "The Legend of Zelda",
     "platform": "NES",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3ip4.jpg"
   },
   {
     "title": "Super Mario World",
     "platform": "SNES",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co779k.jpg"
   },
   {
     "title": "Duck Tales",
@@ -22,37 +25,44 @@
   {
     "title": "Ice Hockey",
     "platform": "NES",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ckq.jpg"
   },
   {
     "title": "Contra",
     "platform": "NES",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co64pi.jpg"
   },
   {
     "title": "Pokemon Red",
     "platform": "GB",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7k6q.jpg"
   },
   {
     "title": "Pokemon Blue",
     "platform": "GB",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7k6p.jpg"
   },
   {
     "title": "Gauntlet",
     "platform": "Arcade",
-    "players": 4
+    "players": 4,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4wc5.jpg"
   },
   {
     "title": "Super Mario Bros.",
     "platform": "NES",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5k7b.jpg"
   },
   {
     "title": "Pac-Man",
     "platform": "Arcade",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1mw3.jpg"
   },
   {
     "title": "Sonic the Hedgehog 2",
@@ -62,146 +72,175 @@
   {
     "title": "Streets of Rage 2",
     "platform": "Sega Genesis",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4te1.jpg"
   },
   {
     "title": "Mortal Kombat II",
     "platform": "Sega Genesis",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6h3h.jpg"
   },
   {
     "title": "Metal Gear Solid",
     "platform": "PlayStation",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobpao.jpg"
   },
   {
     "title": "Tekken 3",
     "platform": "PlayStation",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coajyh.jpg"
   },
   {
     "title": "Crash Bandicoot",
     "platform": "PlayStation",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55ex.jpg"
   },
   {
     "title": "Castlevania: SotN",
     "platform": "PlayStation",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co53m8.jpg"
   },
   {
     "title": "Mario Kart 64",
     "platform": "N64",
-    "players": 4
+    "players": 4,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co67hm.jpg"
   },
   {
     "title": "GoldenEye 007",
     "platform": "N64",
-    "players": 4
+    "players": 4,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co59yk.jpg"
   },
   {
     "title": "Star Fox 64",
     "platform": "N64",
-    "players": 4
+    "players": 4,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coba3e.jpg"
   },
   {
     "title": "The Legend of Zelda: OoT",
     "platform": "N64",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3nnx.jpg"
   },
   {
     "title": "Pokémon Gold",
     "platform": "GBC",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ith.jpg"
   },
   {
     "title": "Link's Awakening DX",
     "platform": "GBC",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7j1h.jpg"
   },
   {
     "title": "Chrono Trigger",
     "platform": "SNES",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co87df.jpg"
   },
   {
     "title": "Street Fighter II",
     "platform": "SNES",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co606p.jpg"
   },
   {
     "title": "Super Mario Kart",
     "platform": "SNES",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabiz.jpg"
   },
   {
     "title": "Donkey Kong Country",
     "platform": "SNES",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3jhu.jpg"
   },
   {
     "title": "Teenage Mutant Ninja Turtles",
     "platform": "Arcade",
-    "players": 4
+    "players": 4,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9229.jpg"
   },
   {
     "title": "The Simpsons Game",
     "platform": "Arcade",
-    "players": 4
+    "players": 4,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7zo7.jpg"
   },
   {
     "title": "Dig Dug",
     "platform": "Arcade",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5dg9.jpg"
   },
   {
     "title": "X-Men",
     "platform": "Arcade",
-    "players": 4
+    "players": 4,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co97ob.jpg"
   },
   {
     "title": "SoulCalibur",
     "platform": "Dreamcast",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ay2.jpg"
   },
   {
     "title": "Crazy Taxi",
     "platform": "Dreamcast",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7h9i.jpg"
   },
   {
     "title": "Halo: Combat Evolved",
     "platform": "Xbox",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2r2r.jpg"
   },
   {
     "title": "Star Wars: KOTOR",
     "platform": "Xbox",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tmz.jpg"
   },
   {
     "title": "Metroid Prime",
     "platform": "GameCube",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6m4m.jpg"
   },
   {
     "title": "Super Smash Bros. Melee",
     "platform": "GameCube",
-    "players": 4
+    "players": 4,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3kpq.jpg"
   },
   {
     "title": "Sonic Adventure",
     "platform": "Dreamcast",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4iln.jpg"
   },
   {
     "title": "Final Fantasy VII",
     "platform": "PlayStation",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vn2.jpg"
   },
   {
     "title": "Festers Quest",
     "platform": "NES",
-    "players": 1
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2sme.jpg"
   }
 ]
