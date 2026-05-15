@@ -57,6 +57,24 @@ describe('db logic', () => {
     expect(fourPlayerGames.map(g => g.title)).toContain('Mario Kart');
   });
 
+  it('throws an error for invalid data', () => {
+    const invalidData = [
+      { title: 'Valid Game', platform: 'NES', players: 2 },
+      { title: 'Invalid Game', platform: 123 }, // platform should be string
+      { title: 'Another Valid', platform: 'SNES', players: 4 }
+    ];
+    fs.writeFileSync(TEST_DATA_FILE, JSON.stringify(invalidData));
+
+    // Suppress console.error for this specific test so it doesn't clutter the test output
+    const originalConsoleError = console.error;
+    console.error = () => {};
+
+    expect(() => getGamesData()).toThrow('DATA CORRUPTION');
+
+    // Restore console.error
+    console.error = originalConsoleError;
+  });
+
   it('initializes file if it does not exist', () => {
     // Ensure file doesn't exist
     if (fs.existsSync(TEST_DATA_FILE)) {

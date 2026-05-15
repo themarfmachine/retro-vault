@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { GameSchema } = require('./schema');
 
 let DATA_FILE = path.join(__dirname, 'games.json');
 
@@ -22,9 +23,17 @@ function getGamesData() {
   const games = JSON.parse(data);
   
   // Ensure all games have players field (default to 1 for existing entries)
-  games.forEach(game => {
+  games.forEach((game, index) => {
     if (!('players' in game)) {
       game.players = 1;
+    }
+    
+    // Validate against schema
+    const result = GameSchema.safeParse(game);
+    if (!result.success) {
+      console.error(`❌ Invalid game data found at index ${index}:`, JSON.stringify(game, null, 2));
+      console.error(`   Validation errors:`, result.error.issues.map(i => `${i.path.join('.')}: ${i.message}`).join(', '));
+      throw new Error(`DATA CORRUPTION: games.json contains invalid entries. Fix or reset the file.`);
     }
   });
   

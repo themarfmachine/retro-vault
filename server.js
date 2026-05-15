@@ -53,6 +53,14 @@ app.delete('/api/games/:title', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Retro Vault API running at http://localhost:${PORT}`);
-});
+try {
+  // Eagerly load and validate games data on startup
+  getGamesData();
+  app.listen(PORT, () => {
+    console.log(`Retro Vault API running at http://localhost:${PORT}`);
+  });
+} catch (err) {
+  console.error('\nFATAL ERROR DURING STARTUP:');
+  console.error(err.message);
+  process.exit(1);
+}
