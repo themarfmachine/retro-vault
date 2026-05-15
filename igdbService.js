@@ -39,15 +39,37 @@ async function getAccessToken() {
   }
 }
 
+const PLATFORM_MAP = {
+  'Arcade': 52,
+  'Dreamcast': 23,
+  'GB': 33,
+  'GBC': 22,
+  'GameCube': 21,
+  'N64': 4,
+  'NES': 18,
+  'PlayStation': 7,
+  'SNES': 19,
+  'Sega Genesis': 29,
+  'Xbox': 11
+};
+
 // Function to search for a game and return its cover URL
-async function getGameCover(title) {
+async function getGameCover(title, platform) {
   const token = await getAccessToken();
   if (!token) return null;
 
   try {
+    let query = `search "${title}"; fields cover.url; limit 1;`;
+    
+    // Add platform filter if platform is mapped
+    const platformId = PLATFORM_MAP[platform];
+    if (platformId) {
+      query = `search "${title}"; where platforms = [${platformId}]; fields cover.url; limit 1;`;
+    }
+
     const response = await axios.post(
       'https://api.igdb.com/v4/games',
-      `search "${title}"; fields cover.url; limit 1;`,
+      query,
       {
         headers: {
           'Client-ID': CLIENT_ID,

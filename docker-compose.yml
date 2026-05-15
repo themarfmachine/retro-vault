@@ -6,6 +6,7 @@ services:
       - "3001:3001"
     volumes:
       - ./games.json:/app/games.json
+      - ./.env:/app/.env:ro
     restart: unless-stopped
 
   frontend:

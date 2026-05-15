@@ -9,13 +9,13 @@
     "title": "The Legend of Zelda",
     "platform": "NES",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3ip4.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1uii.jpg"
   },
   {
     "title": "Super Mario World",
     "platform": "SNES",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co779k.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8lo8.jpg"
   },
   {
     "title": "Duck Tales",
@@ -26,13 +26,13 @@
     "title": "Ice Hockey",
     "platform": "NES",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ckq.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wo5.jpg"
   },
   {
     "title": "Contra",
     "platform": "NES",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co64pi.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ys0.jpg"
   },
   {
     "title": "Pokemon Red",
@@ -50,54 +50,55 @@
     "title": "Gauntlet",
     "platform": "Arcade",
     "players": 4,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4wc5.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3kry.jpg"
   },
   {
     "title": "Super Mario Bros.",
     "platform": "NES",
     "players": 2,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5k7b.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3iu8.jpg"
   },
   {
     "title": "Pac-Man",
     "platform": "Arcade",
     "players": 2,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1mw3.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ulc.jpg"
   },
   {
     "title": "Sonic the Hedgehog 2",
     "platform": "Sega Genesis",
-    "players": 2
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5kkj.jpg"
   },
   {
     "title": "Streets of Rage 2",
     "platform": "Sega Genesis",
     "players": 2,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4te1.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co49sn.jpg"
   },
   {
     "title": "Mortal Kombat II",
     "platform": "Sega Genesis",
     "players": 2,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6h3h.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6bxu.jpg"
   },
   {
     "title": "Metal Gear Solid",
     "platform": "PlayStation",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobpao.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobpal.jpg"
   },
   {
     "title": "Tekken 3",
     "platform": "PlayStation",
     "players": 2,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coajyh.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8d7r.jpg"
   },
   {
     "title": "Crash Bandicoot",
     "platform": "PlayStation",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55ex.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co873w.jpg"
   },
   {
     "title": "Castlevania: SotN",
@@ -115,13 +116,13 @@
     "title": "GoldenEye 007",
     "platform": "N64",
     "players": 4,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co59yk.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa0y2.jpg"
   },
   {
     "title": "Star Fox 64",
     "platform": "N64",
     "players": 4,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coba3e.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob8pu.jpg"
   },
   {
     "title": "The Legend of Zelda: OoT",
@@ -133,49 +134,48 @@
     "title": "Pokémon Gold",
     "platform": "GBC",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ith.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pia.jpg"
   },
   {
     "title": "Link's Awakening DX",
     "platform": "GBC",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7j1h.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4o47.jpg"
   },
   {
     "title": "Chrono Trigger",
     "platform": "SNES",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co87df.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobxzx.jpg"
   },
   {
     "title": "Street Fighter II",
     "platform": "SNES",
     "players": 2,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co606p.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co91ka.jpg"
   },
   {
     "title": "Super Mario Kart",
     "platform": "SNES",
-    "players": 2,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabiz.jpg"
+    "players": 2
   },
   {
     "title": "Donkey Kong Country",
     "platform": "SNES",
     "players": 2,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3jhu.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co70qn.jpg"
   },
   {
     "title": "Teenage Mutant Ninja Turtles",
     "platform": "Arcade",
     "players": 4,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9229.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4iax.jpg"
   },
   {
     "title": "The Simpsons Game",
     "platform": "Arcade",
     "players": 4,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7zo7.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co497q.jpg"
   },
   {
     "title": "Dig Dug",
@@ -187,19 +187,19 @@
     "title": "X-Men",
     "platform": "Arcade",
     "players": 4,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co97ob.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2646.jpg"
   },
   {
     "title": "SoulCalibur",
     "platform": "Dreamcast",
     "players": 2,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ay2.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x6g.jpg"
   },
   {
     "title": "Crazy Taxi",
     "platform": "Dreamcast",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7h9i.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7jt6.jpg"
   },
   {
     "title": "Halo: Combat Evolved",
@@ -217,7 +217,7 @@
     "title": "Metroid Prime",
     "platform": "GameCube",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6m4m.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobbn6.jpg"
   },
   {
     "title": "Super Smash Bros. Melee",
@@ -229,18 +229,30 @@
     "title": "Sonic Adventure",
     "platform": "Dreamcast",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4iln.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5jac.jpg"
   },
   {
     "title": "Final Fantasy VII",
     "platform": "PlayStation",
     "players": 1,
-    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vn2.jpg"
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobny6.jpg"
   },
   {
     "title": "Festers Quest",
     "platform": "NES",
     "players": 1,
     "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2sme.jpg"
+  },
+  {
+    "title": "Gran Turismo",
+    "platform": "Playstation",
+    "players": 2,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20bh.jpg"
+  },
+  {
+    "title": "Dark Cloud 2",
+    "platform": "PLaystation",
+    "players": 1,
+    "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2zhm.jpg"
   }
 ]

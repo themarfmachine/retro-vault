@@ -48,7 +48,7 @@ function getGamesData() {
     for (const game of games) {
       if (!game.coverUrl) {
         try {
-          const url = await getGameCover(game.title);
+          const url = await getGameCover(game.title, game.platform);
           if (url) {
             game.coverUrl = url;
             backgroundUpdated = true;
